@@ -1,0 +1,35 @@
+##
+## ***************************************************
+## Lucus Esson (20615533)
+## CS 116 Winter 2016
+## Assignment 7, Problem 1
+## ***************************************************
+##
+
+import check
+
+def find_word(text, word):
+    if (text[0] == ".") or (text[0] == " ") or (text[0] == ","):
+        return word
+    else:
+        return find_word(text[1:], word + text[0])
+    
+def count_words(text, n):
+    if text == "":
+        return n
+    elif (text[0] == ".") or (text[0] == " ") or (text[0] == ","):
+        return count_words(text[1:], n +1)
+    else:
+        return find_word(text[1:], n)
+    
+    
+def word_count(text):
+    words = count_words(text,0)
+    print("There are a total of" + str(words) + "words.")
+        
+
+
+    
+        
+        
+    
