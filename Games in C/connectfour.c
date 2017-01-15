@@ -2,9 +2,15 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
+// FIRST PROJECT IN C
+// SIMPLE CONNECT FOUR GAME PLAYED THROUGH THE SHELL
+
+
+
+
 // myinsert; where piece is 0 or 1 (computer or user)
-		// c stand for column
-// require: 0 <= c <= 7
+// c stands for column
+// requires: 0 <= c <= 7
 bool myinsert(int num_col, int num_row, int piece, int c, int b[num_col][num_row]) {
 	for(int i = 0; i <= 7; ++i) {
 		if(b[c][i] == -2) {
